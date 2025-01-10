@@ -31,6 +31,7 @@ elif options == "Play Dates":
     st.text_input("Location:")
     st.number_input("Number of Kids:", min_value=1, max_value=20, step=1)
     st.button("Post Play Date")
+    
 # walk through for first time visitors
 if "first_visit" not in st.session_state:
     st.session_state.first_visit = True
@@ -38,6 +39,7 @@ if st.session_state.first_visit:
     st.info("Welcome to Kind Villages! Use the sidebar to explore features.")
     if st.button("Got It"):
         st.session_state.first_visit = False
+        
 # Community Events
 elif options == "Community Events":
     st.header("Community Events")
