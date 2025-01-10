@@ -1,4 +1,5 @@
 # App title and navigation
+
 st.title("Kind Villages Prototype")
 st.sidebar.header("Navigation")
 options = st.sidebar.radio(
