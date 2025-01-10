@@ -8,6 +8,13 @@ options = st.sidebar.radio(
     ["Dashboard", "Play Dates", "Community Events", "Give Back", "Volunteer Opportunities", "Announcements"]
 )
 
+# walk through for first time visitors
+if "first_visit" not in st.session_state:
+    st.session_state.first_visit = True
+if st.session_state.first_visit:
+    st.info("Welcome to Kind Villages! Use the sidebar to explore features.")
+    if st.button("Got It"):
+        st.session_state.first_visit = False
 # Dashboard
 if options == "Dashboard":
     st.header("Dashboard")
@@ -87,10 +94,4 @@ elif options == "Announcements":
 st.sidebar.write("---")
 st.sidebar.write("Kind Villages Prototype v1.0")
 
-# walk through for first time visitors
-if "first_visit" not in st.session_state:
-    st.session_state.first_visit = True
-if st.session_state.first_visit:
-    st.info("Welcome to Kind Villages! Use the sidebar to explore features.")
-    if st.button("Got It"):
-        st.session_state.first_visit = False
+
