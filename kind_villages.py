@@ -1,2 +1,4 @@
 import streamlit as st
-st.title("Testing Streamlit")
+
+# App title and navigation
+st.title("Kind Villages Prototype")
